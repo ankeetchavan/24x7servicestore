@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TV Screen Replacement | LED, LCD, 4K Panel Replacement</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <meta name="description" content="Broken TV screen? We provide original LED/LCD/4K panel replacement for Sony, Samsung, LG, and all major brands. Best price guarantee." />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand-mini">
+        <a href="/" style="text-decoration: none; color: inherit; font-weight: bold; font-size: 18px;">24x7 Service Store</a>
+      </div>
+      <div class="burger" aria-label="menu" role="button"></div>
+    </div>
+  </header>
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <header>Menu</header>
+    <a href="/index.html">Home</a>
+    <a href="/tvrepair/about.html">About Us</a>
+    <a href="/tvrepair/privacy-policy.html">Privacy Policy</a>
+    <a href="/tvrepair/terms-conditions.html">Terms & Conditions</a>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main class="container">
+    <section class="hero">
+      <h1><i class="fas fa-tv" style="color: #dc3545;"></i> TV Screen Replacement</h1>
+      <p><strong>Cracked or Broken TV Screen?</strong> Don't worry! We offer genuine panel replacement services for all major TV brands including Sony, Samsung, LG, Panasonic, and more.</p>
+      
+      <div class="card" style="margin-top: 20px;">
+        <h3 style="margin-bottom: 15px;">We Replace Screens For:</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div style="padding: 10px; background: #f8f9fa; text-align: center; border-radius: 6px;">
+            <i class="fas fa-check-circle" style="color: #28a745;"></i> LED TV
+          </div>
+          <div style="padding: 10px; background: #f8f9fa; text-align: center; border-radius: 6px;">
+            <i class="fas fa-check-circle" style="color: #28a745;"></i> LCD TV
+          </div>
+          <div style="padding: 10px; background: #f8f9fa; text-align: center; border-radius: 6px;">
+            <i class="fas fa-check-circle" style="color: #28a745;"></i> 4K Ultra HD
+          </div>
+          <div style="padding: 10px; background: #f8f9fa; text-align: center; border-radius: 6px;">
+            <i class="fas fa-check-circle" style="color: #28a745;"></i> Smart TV
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 20px;">
+        <h3 style="margin-bottom: 10px;">Why Choose Us?</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 10px;"><i class="fas fa-star" style="color: #ffc107;"></i> <strong>Original Panels:</strong> We source high-quality replacement screens.</li>
+          <li style="margin-bottom: 10px;"><i class="fas fa-star" style="color: #ffc107;"></i> <strong>Best Price:</strong> Competitive pricing compared to authorized centers.</li>
+          <li style="margin-bottom: 10px;"><i class="fas fa-star" style="color: #ffc107;"></i> <strong>Warranty:</strong> Replacement panels come with a warranty.</li>
+          <li style="margin-bottom: 10px;"><i class="fas fa-star" style="color: #ffc107;"></i> <strong>Home Pickup:</strong> We pick up your TV, replace the screen safely, and deliver it back.</li>
+        </ul>
+      </div>
+
+      <div class="cta">
+        <a class="btn primary" href="tel:18003091619" aria-label="Call 1800-309-1619">
+          <span class="icon"><i class="fas fa-phone-alt"></i></span>
+          <span>Check Price: 1800-309-1619</span>
+        </a>
+        <a class="btn whatsapp" href="https://wa.me/918953689444" target="_blank" rel="noopener">
+          <span class="icon"><i class="fab fa-whatsapp"></i></span>
+          <span>WhatsApp Model No.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.mobile-nav');
+    const backdrop = document.querySelector('.nav-backdrop');
+
+    function toggleNav() {
+      nav.classList.toggle('active');
+      backdrop.classList.toggle('active');
+      burger.classList.toggle('active');
+    }
+
+    burger.addEventListener('click', toggleNav);
+    backdrop.addEventListener('click', toggleNav);
+  </script>
+</body>
+</html>

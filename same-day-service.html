@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Same Day Home Service | 24x7 Service Store Lucknow</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <meta name="description" content="Get same-day home service for TV, Refrigerator, Washing Machine, and Microwave repair in Lucknow. Fast, reliable, and doorstep repair within hours." />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand-mini">
+        <a href="/" style="text-decoration: none; color: inherit; font-weight: bold; font-size: 18px;">24x7 Service Store</a>
+      </div>
+      <div class="burger" aria-label="menu" role="button"></div>
+    </div>
+  </header>
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <header>Menu</header>
+    <a href="/index.html">Home</a>
+    <a href="/tvrepair/about.html">About Us</a>
+    <a href="/tvrepair/privacy-policy.html">Privacy Policy</a>
+    <a href="/tvrepair/terms-conditions.html">Terms & Conditions</a>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main class="container">
+    <section class="hero">
+      <h1><i class="fas fa-bolt" style="color: #ffc107;"></i> Same Day Home Service</h1>
+      <p><strong>Need Urgent Repair?</strong> We understand the inconvenience of a broken appliance. That's why we offer <strong>Same Day Home Service</strong> across Lucknow for all major appliances.</p>
+      
+      <div class="card" style="margin-top: 20px;">
+        <h3 style="margin-bottom: 15px;">Why Choose Our Same Day Service?</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-left: 4px solid #28a745;">
+            <strong>🚀 Fast Response:</strong> Technicians reach your home within 2-4 hours of booking.
+          </li>
+          <li style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-left: 4px solid #28a745;">
+            <strong>🏠 Doorstep Repair:</strong> No need to transport heavy appliances. We fix them at your place.
+          </li>
+          <li style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-left: 4px solid #28a745;">
+            <strong>🛠️ Fully Equipped:</strong> Our vans are stocked with common spare parts to complete repairs in one visit.
+          </li>
+          <li style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-left: 4px solid #28a745;">
+            <strong>🕒 Flexible Slots:</strong> Choose a time slot that works for you, including evenings and weekends.
+          </li>
+        </ul>
+      </div>
+
+      <div class="cta">
+        <a class="btn primary" href="tel:18003091619" aria-label="Call 1800-309-1619">
+          <span class="icon"><i class="fas fa-phone-alt"></i></span>
+          <span>Book Now: 1800-309-1619</span>
+        </a>
+        <a class="btn whatsapp" href="https://wa.me/918953689444" target="_blank" rel="noopener">
+          <span class="icon"><i class="fab fa-whatsapp"></i></span>
+          <span>WhatsApp Us</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.mobile-nav');
+    const backdrop = document.querySelector('.nav-backdrop');
+
+    function toggleNav() {
+      nav.classList.toggle('active');
+      backdrop.classList.toggle('active');
+      burger.classList.toggle('active');
+    }
+
+    burger.addEventListener('click', toggleNav);
+    backdrop.addEventListener('click', toggleNav);
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3 Months Warranty Policy | 24x7 Service Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <meta name="description" content="We offer a comprehensive 3-month (90-day) warranty on all repairs and spare parts. Peace of mind guaranteed with 24x7 Service Store Lucknow." />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand-mini">
+        <a href="/" style="text-decoration: none; color: inherit; font-weight: bold; font-size: 18px;">24x7 Service Store</a>
+      </div>
+      <div class="burger" aria-label="menu" role="button"></div>
+    </div>
+  </header>
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <header>Menu</header>
+    <a href="/index.html">Home</a>
+    <a href="/tvrepair/about.html">About Us</a>
+    <a href="/tvrepair/privacy-policy.html">Privacy Policy</a>
+    <a href="/tvrepair/terms-conditions.html">Terms & Conditions</a>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main class="container">
+    <section class="hero">
+      <h1><i class="fas fa-shield-alt" style="color: #28a745;"></i> 3 Months Warranty</h1>
+      <p>We stand behind our work. Every repair service provided by <strong>24x7 Service Store</strong> comes with a standard <strong>90-Day (3 Months) Warranty</strong> on spare parts and service labor.</p>
+      
+      <div class="card" style="margin-top: 20px;">
+        <h3 style="margin-bottom: 15px;">Warranty Coverage Details</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-left: 4px solid #007bff;">
+            <strong>✅ Spare Parts:</strong> If a replaced part fails within 90 days, we replace it FREE of cost.
+          </li>
+          <li style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-left: 4px solid #007bff;">
+            <strong>✅ Service Labor:</strong> No service charge if the same issue reoccurs within the warranty period.
+          </li>
+          <li style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-left: 4px solid #007bff;">
+            <strong>✅ Hassle-Free Claims:</strong> Just call our support number, and we'll prioritize your warranty claim.
+          </li>
+        </ul>
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">*Warranty is applicable only on the specific parts replaced and the specific issue repaired. Physical damage or voltage fluctuation damage is not covered.</p>
+      </div>
+
+      <div class="cta">
+        <a class="btn primary" href="tel:18003091619" aria-label="Call 1800-309-1619">
+          <span class="icon"><i class="fas fa-phone-alt"></i></span>
+          <span>Call Support: 1800-309-1619</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.mobile-nav');
+    const backdrop = document.querySelector('.nav-backdrop');
+
+    function toggleNav() {
+      nav.classList.toggle('active');
+      backdrop.classList.toggle('active');
+      burger.classList.toggle('active');
+    }
+
+    burger.addEventListener('click', toggleNav);
+    backdrop.addEventListener('click', toggleNav);
+  </script>
+</body>
+</html>
