@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="/assets/styles.css" />
   <meta name="description" content="Broken TV screen? We provide original LED/LCD/4K panel replacement for Sony, Samsung, LG, and all major brands. Best price guarantee." />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17617922277"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17617922277');
+  </script>
 </head>
 <body>
   <header class="header">
@@ -72,19 +81,6 @@
     </section>
   </main>
   
-  <script>
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.mobile-nav');
-    const backdrop = document.querySelector('.nav-backdrop');
-
-    function toggleNav() {
-      nav.classList.toggle('active');
-      backdrop.classList.toggle('active');
-      burger.classList.toggle('active');
-    }
-
-    burger.addEventListener('click', toggleNav);
-    backdrop.addEventListener('click', toggleNav);
-  </script>
+  <script src="assets/main.js"></script>
 </body>
 </html>
