@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (typeof gtag === 'function') {
             gtag('event', 'conversion', {
-                'send_to': 'AW-17617922277', // <--- IMPORTANT: If you have a Conversion Label (e.g., /AbCdEfG), add it here like 'AW-17617922277/AbCdEfG'
+                'send_to': 'AW-17617922277/ut4QCIGWyr4bEOXR8NBB',
                 'event_callback': function() {
                     clearTimeout(safetyTimer);
                     callback();
