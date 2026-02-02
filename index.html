@@ -33,29 +33,19 @@
     }
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            900: '#1e3a8a',
-                        }
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- CSS Variables for Dynamic Branding -->
     <style>
-        /* Custom styles to ensure images fit well */
+        :root {
+            /* Default Blue Theme (Will be overridden by JS) */
+            --brand-50: #eff6ff;
+            --brand-100: #dbeafe;
+            --brand-500: #3b82f6;
+            --brand-600: #2563eb;
+            --brand-700: #1d4ed8;
+            --brand-900: #1e3a8a;
+        }
+
+        /* Custom styles */
         .brand-logo-img {
             max-height: 50px;
             width: auto;
@@ -66,6 +56,28 @@
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
     </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: 'var(--brand-50)',
+                            100: 'var(--brand-100)',
+                            500: 'var(--brand-500)',
+                            600: 'var(--brand-600)',
+                            700: 'var(--brand-700)',
+                            900: 'var(--brand-900)',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="font-sans text-slate-800 bg-white">
 
@@ -137,16 +149,14 @@
             <div class="w-full md:w-1/2 flex justify-center relative z-10">
                 <div class="relative w-full max-w-md">
                     <!-- Blob Background -->
-                    <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                    <div class="absolute top-0 -right-4 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-                    <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+                    <div class="absolute top-0 -left-4 w-72 h-72 bg-brand-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                    <div class="absolute top-0 -right-4 w-72 h-72 bg-brand-50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                    <div class="absolute -bottom-8 left-20 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
                     
-                    <!-- Main Product Image -->
-                    <img id="hero-image" src="img/washing-machine.png" alt="Appliance Repair" class="relative rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500 border-4 border-white bg-white object-contain w-full h-auto max-h-[400px]">
-                    
-                    <!-- Brand Badge Overlay -->
-                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100">
-                         <img id="floating-brand-logo" src="img/lg-logo.png" alt="Brand Logo" class="h-10 w-auto object-contain">
+                    <!-- Main Product Image / BIG LOGO -->
+                    <!-- Changed object-fit to contain and added padding for Logo mode -->
+                    <div class="relative rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500 border-4 border-white bg-white w-full h-[400px] flex items-center justify-center p-8">
+                        <img id="hero-image" src="img/washing-machine.png" alt="Appliance Repair" class="w-full h-full object-contain">
                     </div>
                 </div>
             </div>
@@ -157,19 +167,19 @@
     <section class="bg-brand-900 text-white py-8">
         <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-                <div class="text-3xl font-bold text-brand-200">10k+</div>
+                <div class="text-3xl font-bold text-brand-500">10k+</div>
                 <div class="text-sm opacity-80">Happy Customers</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-brand-200">4.8/5</div>
+                <div class="text-3xl font-bold text-brand-500">4.8/5</div>
                 <div class="text-sm opacity-80">Google Rating</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-brand-200">24/7</div>
+                <div class="text-3xl font-bold text-brand-500">24/7</div>
                 <div class="text-sm opacity-80">Emergency Service</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-brand-200">90 Days</div>
+                <div class="text-3xl font-bold text-brand-500">90 Days</div>
                 <div class="text-sm opacity-80">Service Warranty</div>
             </div>
         </div>
@@ -347,56 +357,69 @@
 
     <!-- Logic Script -->
     <script>
+        // Palette Definitions
+        const colorPalettes = {
+            blue: { // Default (Samsung, Whirlpool, etc.)
+                50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a'
+            },
+            red: { // LG, IFB
+                50: '#fef2f2', 100: '#fee2e2', 500: '#ef4444', 600: '#dc2626', 700: '#b91c1c', 900: '#7f1d1d'
+            },
+            dark: { // Sony
+                50: '#f8fafc', 100: '#f1f5f9', 500: '#64748b', 600: '#0f172a', 700: '#334155', 900: '#020617'
+            }
+        };
+
         // Configuration Data for Brands
         const brandsData = {
             'sony': {
                 name: 'Sony',
                 logo: 'img/sony-logo.png',
-                heroImage: 'img/smart-led-tv-1000x1000.webp',
                 appliance: 'LED TV & Home Audio',
-                category: 'TV & Audio' // Specific category for Sony
+                category: 'TV & Audio',
+                theme: 'dark' // Black/Slate Theme
             },
             'samsung': {
                 name: 'Samsung',
                 logo: 'img/samsung-logo.png',
-                heroImage: 'img/washing-machine.png', // Or fridge based on preference
                 appliance: 'Home Appliances',
-                category: 'Appliances'
+                category: 'Appliances',
+                theme: 'blue' // Corporate Blue
             },
             'lg': {
                 name: 'LG',
                 logo: 'img/lg-logo.png',
-                heroImage: 'img/washing-machine.png',
                 appliance: 'Washing Machines & Fridges',
-                category: 'Appliances'
+                category: 'Appliances',
+                theme: 'red' // LG Red
             },
             'whirlpool': {
                 name: 'Whirlpool',
                 logo: 'img/whirlpool-logo.png',
-                heroImage: 'img/fridge.jpg',
                 appliance: 'Refrigerators & Washers',
-                category: 'Appliances'
+                category: 'Appliances',
+                theme: 'blue'
             },
-            'bosch': { // Handling common typo in query params "bosh" below
+            'bosch': { 
                 name: 'Bosch',
-                logo: 'img/bosh-logo.png', // Assuming file name matches your list
-                heroImage: 'img/washing-machine.png',
+                logo: 'img/bosh-logo.png',
                 appliance: 'Premium Appliances',
-                category: 'Appliances'
+                category: 'Appliances',
+                theme: 'blue'
             },
             'ifb': {
                 name: 'IFB',
                 logo: 'img/ifb-logo.png',
-                heroImage: 'img/microwave.jpg',
                 appliance: 'Washing Machines & Ovens',
-                category: 'Appliances'
+                category: 'Appliances',
+                theme: 'red' // IFB Red
             },
             'panasonic': {
                 name: 'Panasonic',
                 logo: 'img/panasonic-logo.png',
-                heroImage: 'img/smart-led-tv-1000x1000.webp',
                 appliance: 'TVs & Appliances',
-                category: 'Appliances'
+                category: 'Appliances',
+                theme: 'blue'
             }
         };
 
@@ -404,6 +427,18 @@
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param) ? urlParams.get(param).toLowerCase() : null;
+        }
+
+        function applyTheme(themeName) {
+            const palette = colorPalettes[themeName] || colorPalettes['blue'];
+            const root = document.documentElement;
+            
+            root.style.setProperty('--brand-50', palette[50]);
+            root.style.setProperty('--brand-100', palette[100]);
+            root.style.setProperty('--brand-500', palette[500]);
+            root.style.setProperty('--brand-600', palette[600]);
+            root.style.setProperty('--brand-700', palette[700]);
+            root.style.setProperty('--brand-900', palette[900]);
         }
 
         // Main Logic
@@ -417,37 +452,29 @@
 
             // If a valid brand is found in URL
             if (data) {
-                // Update Page Title
+                // 1. Apply Color Theme
+                applyTheme(data.theme);
+
+                // 2. Update Page Title
                 document.title = `${data.name} Service Center | Expert Repairs`;
 
-                // Update Hero Text
-                // Uses the specific category (e.g. "Sony TV & Audio" vs "Samsung Appliances")
+                // 3. Update Hero Text
                 document.getElementById('hero-brand-name').textContent = data.name + " " + data.category;
                 document.getElementById('hero-appliance-type').textContent = data.name + " devices";
                 document.getElementById('disclaimer-brand').textContent = data.name + " products";
                 
-                // Update Images
-                const floatingLogo = document.getElementById('floating-brand-logo');
-                floatingLogo.src = data.logo;
-                floatingLogo.alt = `${data.name} Service`;
+                // 4. Update HERO IMAGE -> Now uses the BIG LOGO logic
+                const heroImg = document.getElementById('hero-image');
+                heroImg.src = data.logo; 
+                heroImg.alt = `${data.name} Authorized Service`;
+                // Add specific styling for logo vs product
+                // Note: The HTML container already has object-fit:contain and padding to accommodate logos nicely
 
-                // Logic to set specific hero image if the brand is known for TVs vs Appliances
-                // Defaulting to washing machine, but swapping for Sony/Panasonic
-                if(brandKey === 'sony' || brandKey === 'panasonic') {
-                     document.getElementById('hero-image').src = 'img/smart-led-tv-1000x1000.webp';
-                } else if (brandKey === 'ifb' || brandKey === 'whirlpool') {
-                    // Logic to rotate images or pick specific ones can go here
-                    // Using what you provided in the list
-                    document.getElementById('hero-image').src = data.heroImage;
-                } else {
-                     document.getElementById('hero-image').src = data.heroImage;
-                }
-
-                // Update Span elements across the page
+                // 5. Update Span elements
                 const brandSpans = document.querySelectorAll('.brand-name-span');
                 brandSpans.forEach(span => span.textContent = data.name);
 
-                // Update Form Select
+                // 6. Update Form Select
                 const select = document.getElementById('form-brand-select');
                 for (let i = 0; i < select.options.length; i++) {
                     if (select.options[i].value.toLowerCase() === data.name.toLowerCase()) {
@@ -456,12 +483,11 @@
                     }
                 }
                 
-                // --- NEW: Hide Brand Selection Dropdown on Brand Pages ---
-                // Since the brand is implied by the page URL, we hide the selection to simplify the form
+                // 7. Hide Brand Selection Dropdown
                 const brandSelectWrapper = document.getElementById('brand-select-wrapper');
                 if (brandSelectWrapper) brandSelectWrapper.style.display = 'none';
 
-                // Inject Logo into Nav (Replacing text if needed, or keeping text next to it)
+                // 8. Inject Logo into Nav
                 const navContainer = document.getElementById('nav-logo-container');
                 navContainer.innerHTML = `
                     <div class="flex items-center gap-2">
@@ -470,47 +496,35 @@
                     </div>
                 `;
 
-                // --- NEW LOGIC: Dynamic Services Grid ---
+                // 9. Sony Specific Grid Logic
                 if (brandKey === 'sony') {
-                    // 1. Update Section Description
                     document.getElementById('section-repair-text').innerHTML = 
                         `Specialized diagnostic and repair services for all major <span class="text-brand-600 font-bold">${data.name}</span> electronics and audio visual systems.`;
 
-                    // 2. Hide Fridge & Microwave
                     document.getElementById('card-fridge').style.display = 'none';
                     document.getElementById('card-mw').style.display = 'none';
 
-                    // 3. Convert Washing Machine Card to "Home Audio"
                     document.getElementById('title-wm').textContent = 'Home Audio & Soundbar';
                     document.getElementById('desc-wm').textContent = 'Speakers, Subwoofers & Connection Issues';
-                    // Change Icon
                     const iconContainer = document.getElementById('icon-wm');
                     iconContainer.innerHTML = '<i class="fas fa-music text-2xl text-brand-600 group-hover:text-white"></i>';
 
-                    // 4. Adjust Grid to be centered for 2 items
                     const grid = document.getElementById('services-grid');
-                    // Remove 4-col layout, switch to flex centered or 2-col centered
                     grid.classList.remove('md:grid-cols-4');
                     grid.classList.add('md:grid-cols-2', 'max-w-3xl', 'mx-auto');
                     
                 } else {
-                    // Default behavior for other brands (Ensure everything is visible if re-visiting)
-                    // (Not strictly necessary if page reloads, but good for robustness)
                     document.getElementById('card-fridge').style.display = 'block';
                     document.getElementById('card-mw').style.display = 'block';
                 }
-                // --- END NEW LOGIC ---
 
             } else {
                 // Default / Fallback View (No brand selected)
                 document.getElementById('hero-brand-name').textContent = "All Major Brands";
-                document.getElementById('floating-brand-logo').style.display = 'none'; 
                 
-                // Ensure dropdown is visible on main page
                 const brandSelectWrapper = document.getElementById('brand-select-wrapper');
                 if (brandSelectWrapper) brandSelectWrapper.style.display = 'block';
 
-                // Set default image
                 document.getElementById('hero-image').src = 'img/washing-machine.png';
             }
         });
