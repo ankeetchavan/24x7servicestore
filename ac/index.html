@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Authorized AC Service Center</title>
+    <!-- Google Fonts: Inter for an ultra-modern, clean aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Top Urgent Bar -->
+    <div class="top-bar">
+        <span>⚡ 24/7 Emergency AC Service in Your Area</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header blur-glass">
+        <div class="container header-container">
+            <div class="logo">
+                <img id="brand-logo" src="assets/default-logo.png" alt="AC Service Logo"
+                    onerror="this.src=''; this.style.display='none'; document.getElementById('brand-text-logo').style.display='block';">
+                <span id="brand-text-logo" class="brand-text-fallback" style="display:none;">AC SERVICE</span>
+            </div>
+            <a href="tel:18005691141" class="btn btn-outline btn-sm hide-mobile">
+                <span class="icon">📞</span> Call Now
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-brand-presenter fade-in-up">
+                <div class="hbp-label">AUTHORIZED SERVICE CENTER</div>
+                <img id="hero-big-logo" src="assets/default-logo.png" alt="Official Brand Logo">
+            </div>
+            <div class="badge fade-in-up delay-1">🌟 India's #1 Rated Service</div>
+            <h1 id="hero-title" class="fade-in-up delay-1">Expert <span class="highlight">AC Repair</span><br />at Your
+                Doorstep</h1>
+            <p id="hero-subtitle" class="fade-in-up delay-2">Fast, reliable, and professional certified service within
+                60 minutes. Book your trustworthy technician today.</p>
+
+            <div class="hero-actions fade-in-up delay-3">
+                <a href="tel:18005691141" class="btn btn-primary btn-block btn-huge pulse-anim">
+                    <span class="cta-primary-text">Book Service Now</span>
+                    <span class="cta-secondary-text">Call 1800-569-1141</span>
+                </a>
+            </div>
+
+            <div class="trust-scroller fade-in-up delay-4">
+                <div class="trust-item">
+                    <div class="t-icon">⏱️</div>
+                    <span>60 Min Arrival</span>
+                </div>
+                <div class="trust-item">
+                    <div class="t-icon">👨‍🔧</div>
+                    <span>Certified Pros</span>
+                </div>
+                <div class="trust-item">
+                    <div class="t-icon">🛡️</div>
+                    <span>90d Warranty</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Brands (Hidden if specific brand is requested) -->
+    <section id="brands-section" class="brands section bg-surface">
+        <div class="container">
+            <div class="section-header">
+                <h2>Brands We Service</h2>
+                <p>Expertise across all major manufacturers</p>
+            </div>
+            <!-- The JS will inject the brands into this container -->
+            <div class="brands-scroller" id="all-brands-grid">
+                <!-- Managed by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Us?</h2>
+                <p>Transparent pricing and guaranteed satisfaction.</p>
+            </div>
+            <div class="mobile-stack">
+                <div class="feature-card glass-panel">
+                    <div class="f-icon bg-gradient-1">💯</div>
+                    <div class="f-content">
+                        <h3>Genuine Parts</h3>
+                        <p>100% original spare parts directly from the manufacturer.</p>
+                    </div>
+                </div>
+                <div class="feature-card glass-panel">
+                    <div class="f-icon bg-gradient-2">💸</div>
+                    <div class="f-content">
+                        <h3>Transparent Pricing</h3>
+                        <p>No hidden costs. Get a clear estimate before we start.</p>
+                    </div>
+                </div>
+                <div class="feature-card glass-panel">
+                    <div class="f-icon bg-gradient-3">🛡️</div>
+                    <div class="f-content">
+                        <h3>Service Warranty</h3>
+                        <p>Peace of mind with a 90-day warranty on all repairs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered Section -->
+    <section class="services section bg-surface mt-spacer">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Complete cooling solutions for your home</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="s-img-wrapper">
+                        <span class="s-icon">🔧</span>
+                    </div>
+                    <h4>AC Repair</h4>
+                    <p>Fixing cooling issues & leaks.</p>
+                </div>
+                <div class="service-box">
+                    <div class="s-img-wrapper">
+                        <span class="s-icon">❄️</span>
+                    </div>
+                    <h4>Gas Refill</h4>
+                    <p>Thorough gas leak check.</p>
+                </div>
+                <div class="service-box">
+                    <div class="s-img-wrapper">
+                        <span class="s-icon">🛠️</span>
+                    </div>
+                    <h4>Installation</h4>
+                    <p>Safe & perfect fitting.</p>
+                </div>
+                <div class="service-box">
+                    <div class="s-img-wrapper">
+                        <span class="s-icon">🧼</span>
+                    </div>
+                    <h4>Deep Clean</h4>
+                    <p>Foam jet cleaning service.</p>
+                </div>
+            </div>
+
+            <div class="cta-wrapper section-mt">
+                <a href="tel:18005691141" class="btn btn-secondary btn-block">Schedule a Visit Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="brand-footer">
+                <h3>AC Service Expert</h3>
+                <p>Professional repair and maintenance.</p>
+            </div>
+            <div class="contact-footer">
+                <a href="tel:18005691141" class="footer-link">📞 1800-569-1141</a>
+                <a href="mailto:support@acservice.in" class="footer-link">📧 support@acservice.in</a>
+            </div>
+            <div class="legal-footer">
+                <p>&copy; 2026 AC Service Expert. All Rights Reserved.</p>
+                <p class="disclaimer">Disclaimer: We are an independent service provider.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA - Crucial for lower funnel -->
+    <div class="sticky-bottom-bar">
+        <a href="tel:18005691141" class="btn btn-primary btn-block sticky-btn pulse-anim">
+            <span class="icon">📞</span> Call Technician Now
+        </a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
