@@ -68,6 +68,15 @@
             background-color: #f8fafc;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+        
+        #hero-image {
+            opacity: 0;
+            transition: opacity 0.35s ease-in-out;
+        }
+
+        #hero-image.loaded {
+            opacity: 1;
+        }
     </style>
 
     <script>
@@ -459,6 +468,23 @@
             return urlParams.get(param) ? urlParams.get(param).toLowerCase() : null;
         }
 
+        // Helper to load hero image and reveal only after load
+        function loadHeroImage(src, alt) {
+            const heroImg = document.getElementById('hero-image');
+            if (!heroImg) return;
+
+            heroImg.classList.remove('loaded');
+            heroImg.src = src;
+            if (alt) heroImg.alt = alt;
+
+            heroImg.onload = function () {
+                heroImg.classList.add('loaded');
+            };
+            heroImg.onerror = function () {
+                heroImg.classList.add('loaded');
+            };
+        }
+
         function applyTheme(themeName) {
             const palette = colorPalettes[themeName] || colorPalettes['blue'];
             const root = document.documentElement;
@@ -483,6 +509,9 @@
 
             // If a valid brand is found in URL
             if (data) {
+                // 0. Set hero image as soon as possible
+                loadHeroImage(data.logo, `${data.name} Authorized Service`);
+
                 // 1. Apply Color Theme
                 applyTheme(data.theme);
 
@@ -493,11 +522,6 @@
                 document.getElementById('hero-brand-name').textContent = data.name + " " + data.category;
                 document.getElementById('hero-appliance-type').textContent = data.name + " devices";
                 document.getElementById('disclaimer-brand').textContent = data.name + " products";
-                
-                // 4. Update HERO IMAGE -> BIG LOGO
-                const heroImg = document.getElementById('hero-image');
-                heroImg.src = data.logo; 
-                heroImg.alt = `${data.name} Authorized Service`;
 
                 // 5. Update Span elements
                 const brandSpans = document.querySelectorAll('.brand-name-span');
@@ -591,7 +615,7 @@
                 const brandSelectWrapper = document.getElementById('brand-select-wrapper');
                 if (brandSelectWrapper) brandSelectWrapper.style.display = 'block';
 
-                document.getElementById('hero-image').src = 'img/washing-machine.png';
+                loadHeroImage('img/washing-machine.png', 'Appliance Repair');
             }
         });
     </script>
